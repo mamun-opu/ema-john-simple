@@ -1,0 +1,15 @@
+.inventory{
+    width: 20%;
+    padding-left: 20px;
+}
+.inventory h3{
+    text-align: center;
+}
+.inventory button{
+    width: 180px;
+    height: 30px;
+    background-color: goldenrod;
+    border-radius: 5px;
+    border: 1px solid grey;
+
+}

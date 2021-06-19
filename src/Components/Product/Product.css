@@ -1,0 +1,25 @@
+.productDetails{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+.imageSection{
+    width: 20%;
+}
+.infoSection{
+    width: 80%;
+}
+.infoSection button{
+    width: 180px;
+    height: 30px;
+    background-color: goldenrod;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.infoSection button:hover{
+    cursor: pointer;
+}
+.infoSection h4{
+    color: blue;
+}
