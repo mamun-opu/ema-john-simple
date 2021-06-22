@@ -2,7 +2,6 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Shop from './Components/Shop/Shop';
 import Review from './Components/Review/Review';
-import Inventory from './Components/Inventory/Inventory';
 import Error from './Components/Error/Error';
 import Productdetails from './Components/Productdetails/Productdetails';
 import {
@@ -11,23 +10,23 @@ import {
   Route
 } from "react-router-dom";
 
+
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+      
       <Router>
         <Switch>
           <Route exact path = '/'>
+            <Header></Header>
             <Shop></Shop>
           </Route>
           <Route path = '/shop'>
+            <Header></Header>
             <Shop></Shop>
           </Route>
           <Route path = '/review'>
             <Review></Review>
-          </Route>
-          <Route path = '/inventory'>
-            <Inventory></Inventory>
           </Route>
           <Route path = '/product/:productKey'>
             <Productdetails></Productdetails>

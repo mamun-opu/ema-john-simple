@@ -1,8 +1,9 @@
 import React from 'react';
 import './ReviewProduct.css'
 
+
 const ReviewProduct = (props) => {
-    console.log(props);
+    // console.log(props);
     const {img, name, price, quantity, key} = props.product; 
     return (
         <div className = "reviewCart">

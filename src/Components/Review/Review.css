@@ -1,0 +1,10 @@
+.review{
+    margin: 0 10%;
+    display: flex;
+}
+
+.productDesc{
+    border-right: 1px solid #c7c6c6;
+    padding: 20px;
+    width: 80%;
+}

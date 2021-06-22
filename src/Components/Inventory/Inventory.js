@@ -1,14 +1,21 @@
 import React from 'react';
 import './Inventory.css'
-import { Link } from 'react-router-dom';
 
 const Inventory = (props) => {
     const cart = props.cart;
-    // console.log(cart.length);
-    const totalPrice = cart.reduce((total, current) => total + current.price, 0);
+    // console.log(props.cart);
+    // const totalPrice = cart.reduce((total, current) => total + current.price * current.quantity, 0);
+    let totalPrice = 0;
+    let shippingCost = 0;
+    for (let i = 0; i < cart.length; i++) {
+        const product = cart[i];
+        totalPrice = product.price*product.quantity + totalPrice;
+        shippingCost = product.shipping + shippingCost;
+    }
 
-    console.log(totalPrice);
-
+    // cart.reduce((total, prod) => console.log(total,prod),0)
+    // console.log(totalPrice);
+    // debugger;
 
     // const totalPrice = cart.reduce((total, prd) => total + prd.price,0);
     // console.log(props);
@@ -16,10 +23,13 @@ const Inventory = (props) => {
         <div className = 'inventory'>
             <h3>Order summery</h3>
             <p>Items ordered: {cart.length}</p>
-            <br />
             <p><small>items price: ${totalPrice}</small></p>
+            <p><small>shipping cost: ${shippingCost}</small></p>
+            <p>total cost: ${totalPrice + shippingCost}</p>
             <br />
-            <button><Link to="/review">Review Cart</Link></button>
+            {
+                props.children
+            }
         </div>
     );
 };
