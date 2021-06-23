@@ -7,9 +7,6 @@ import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseMana
 import Inventory from '../Inventory/Inventory';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
-
 
 const Shop = () => {
     const [cart, setCart] = useState([]);
@@ -78,11 +75,9 @@ const Shop = () => {
                     }
                 </div>
                 <Inventory cart = {cart}>
-                    <button><Link to="/review"> <FontAwesomeIcon icon= {faCheckCircle}/> Review Cart</Link></button>
+                    <button><Link style = {{color: 'black', textDecoration : 'none'}} to="/review"> Review Cart</Link></button>
                 </Inventory>
             </div>
-            
-            
         </div>
     );
 };

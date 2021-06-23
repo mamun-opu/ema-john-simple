@@ -9,6 +9,8 @@
 }
 .infoSection{
     width: 80%;
+    
+    margin-left: 50px;
 }
 .infoSection button{
     width: 180px;

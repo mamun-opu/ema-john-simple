@@ -1,6 +1,7 @@
 .inventory{
     width: 20%;
     padding-left: 20px;
+    color: black;
 }
 .inventory h3{
     text-align: center;
@@ -11,5 +12,8 @@
     background-color: goldenrod;
     border-radius: 5px;
     border: 1px solid grey;
-
+    color: black;
+}
+.reviewBtn{
+    color: black;
 }

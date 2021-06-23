@@ -1,5 +1,7 @@
 import React from 'react';
-import './ReviewProduct.css'
+import './ReviewProduct.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 const ReviewProduct = (props) => {
@@ -17,7 +19,7 @@ const ReviewProduct = (props) => {
                     <br />
                     <p>quantity: {quantity}</p>
                     <br />
-                    <button onClick = {()=> props.handleRemoveCart(key)}> Remove Product</button>
+                    <button onClick = {()=> props.handleRemoveCart(key)}><FontAwesomeIcon icon= {faTrash}/> Remove Product</button>
                 </div>
         </div>
     );

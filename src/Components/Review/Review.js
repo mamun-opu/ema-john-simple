@@ -8,6 +8,8 @@ import { removeFromDatabaseCart } from '../../utilities/databaseManager';
 import Inventory from '../Inventory/Inventory';
 import './Review.css'
 import giphy from  '../../images/giphy.gif'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Review = () => {
     const [cart, setCart] = useState([]);
@@ -56,7 +58,7 @@ const Review = () => {
                 }
             </div>
             <Inventory cart = {cart}>
-                <button onClick = {handlePlaceOrder}>Place order</button>
+                <button onClick = {handlePlaceOrder}> <FontAwesomeIcon icon= {faCheckCircle}/> Place order</button>
             </Inventory>
             
         </div>
