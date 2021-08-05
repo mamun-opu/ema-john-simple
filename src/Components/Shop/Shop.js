@@ -61,7 +61,7 @@ const Shop = () => {
     
 
     const newData = fakeData.slice(0,10);
-    console.log(newData);
+    // console.log(newData);
     return (
         <div>
             <div className = 'searchBox'>
