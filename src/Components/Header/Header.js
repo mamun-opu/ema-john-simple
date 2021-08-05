@@ -7,7 +7,7 @@ import './Header.css';
 
 
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+    const [loggedInUser] = useContext(userContext);
     return (
         <div>
             <div className = 'Header'>

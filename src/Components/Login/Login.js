@@ -12,7 +12,7 @@ if (firebase.apps.length === 0) {
   }
 
 const Login = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+    const [, setLoggedInUser] = useContext(userContext);
     // console.log(loggedInUser);
     const [userInfo, setUserInfo] = useState({
         name: '',
@@ -46,7 +46,6 @@ const Login = () => {
 
     }
     const handleBtnSubmit = (e) =>{
-        console.log('history: ', history)
         if (userInfo.email && userInfo.password) {
             firebase.auth().signInWithEmailAndPassword(userInfo.email, userInfo.password)
             .then((result) => {
@@ -64,7 +63,6 @@ const Login = () => {
                 console.log(error)
             });
         }
-
         e.preventDefault();
     }
 

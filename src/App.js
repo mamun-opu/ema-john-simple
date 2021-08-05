@@ -14,7 +14,6 @@ import Login from './Components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Inventory from './Components/Inventory/Inventory';
 
 
 export const userContext = createContext();
