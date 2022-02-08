@@ -10,10 +10,10 @@ import {
   Route
 } from "react-router-dom";
 import Shipment from './Components/Shipment/Shipment';
-import Login from './Components/Login/Login';
+// import Login from './Components/Login/Login';
 import { createContext } from 'react';
 import { useState } from 'react';
-import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
 
 
 export const userContext = createContext();
@@ -42,12 +42,15 @@ function App() {
           <Route path = '/product/:productKey'>
             <Productdetails></Productdetails>
           </Route>
-          <PrivateRoute path = '/shipment'>
+          <Route path= '/shipment'>
             <Shipment></Shipment>
-          </PrivateRoute>
-          <Route path = '/login'>
-            <Login></Login>
           </Route>
+          {/* <PrivateRoute path = '/shipment'>
+            <Shipment></Shipment>
+          </PrivateRoute> */}
+          {/* <Route path = '/login'>
+            <Login></Login>
+          </Route> */}
           <Route path = '/*'>
             <Error></Error>
           </Route>
